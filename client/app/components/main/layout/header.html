@@ -1,0 +1,45 @@
+<nav id="topbar" role="navigation" style="margin-bottom: 0;" data-step="1"
+     data-intro="&lt;b&gt;Topbar&lt;/b&gt; has other styles with live demo. Go to &lt;b&gt;Layouts-&gt;Header&amp;Topbar&lt;/b&gt; and check it out."
+     class="navbar navbar-default navbar-static-top">
+    <div class="navbar-header navbar-header-dashboard">
+        <a id="" href="/#/" class="navbar-brand navbar-brand-logo">
+            <!-- <span class="fa fa-rocket"></span> -->
+            <span class="logo-text"><img src=""/></span>
+            <span style="display: none" class="logo-text-icon"></span>
+            <a id="menu-toggle" class="hidden-collapse" ng-click="header.collapse('k')">
+                <i class="fa fa-bars fa-bars-dashboard"></i>
+            </a>
+        </a>
+    </div>
+    <div class="topbar-main top-bar-right">
+        <div class="top-bar-right-wrapper">
+            <div class="header-title" translate>TITLE</div>
+            <!-- <div id="title-breadcrumb-option-demo" ng-include="'app/components/main/breadcrumb/breadcrumb.html'" class="page-title-breadcrumb page-title-topbar"></div> -->
+            
+            <ul class="nav navbar navbar-top-link navbar-right mbn">
+                <li dropdown class="topbar-user pull-right ">
+                    <a class="user-name-dropdown" data-hover="dropdown" dropdown-toggle>
+                        <img src="../assets/images/user.jpg" alt="" class="img-responsive img-circle"/>&nbsp;
+                        <span class="user-name-top-bar">{{user.display_name || user.username}}</span>&nbsp;<span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user pull-right">
+                        <li><a ui-sref="index.profile"><i class="fa fa-user dd-icon"></i>{{"MY_PROFILE"|translate}}</a></li>
+                        <!--<li class="divider"></li>-->
+                        <li><a ng-click="vm.logOut()"><i class="fa fa-key dd-icon"></i>{{"LOG_OUT"|translate}}</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar navbar-top-link navbar-right mbn">
+                <li dropdown class="topbar-user pull-right ">
+                    <a class="user-name-dropdown language-dropdown" data-hover="dropdown" dropdown-toggle>
+                        <span class="user-name-top-bar">{{vm.currentLanguage}}</span>&nbsp;<span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user pull-right">
+                        <li ng-repeat="lang in vm.languages" ng-hide="vm.currentLanguage==lang.text"><a ng-click="vm.changeLanguage($index)">{{lang.text}}</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+    </div>
+</nav>

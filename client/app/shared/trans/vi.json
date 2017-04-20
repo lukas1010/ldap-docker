@@ -1,0 +1,330 @@
+{
+  "HOME": "Trang chủ",
+  "REMEMBER_ME": "Đăng nhập lần sau",
+  "LOG_IN": "Đăng nhập",
+  "USERNAME_OR_EMAIL": "Tài khoản hoặc email",
+  "USERNAME": "Tên đăng nhập",
+  "PASSWORD": "Mật khẩu",
+  "FORGOTTEN_PASSWORD": "Quên mật khẩu",
+  "LINK_RESET_PASSWORD": {
+    "1": "Đừng lo, bấm",
+    "2": "vào đây",
+    "3": "để khôi phục mật khẩu"
+  },
+  "DISPLAY_NAME": "Tên hiển thị",
+  "DESCRIPTION": "Mô tả",
+  "EMAIL": "Email",
+  "ADDRESS": "Địa chỉ",
+  "STATUS": "Trạng thái",
+  "EDIT_PROFILE": "Sửa thông tin",
+  "GENDER": "Giới tính",
+  "GENDERS": {
+    "MALE": "Nam",
+    "FEMALE": "Nữ"
+  },
+  "SAVE": "Lưu",
+  "CREATE": "Tạo",
+  "CANCEL": "Hủy",
+  "PHONE_NUMBER": "Số điện thoại",
+  "CHANGE_PASSWORD": "Thay đổi mật khẩu",
+  "CURRENT_PASSWORD": "Mật khẩu hiện tại",
+  "NEW_PASSWORD": "Mật khẩu mới",
+  "CONFIRM_PASSWORD": "Nhập lại mật khẩu",
+  "UPDATE_SUCCESSFUL": "Cập nhật thành công",
+  "ROLE": "Quyền",
+  "ROLES": {
+    "SUPER_ADMIN": "Quản trị hệ thống",
+    "ADMIN": "Quản trị viên",
+    "AGENCY": "Nhân viên",
+    "END_USER": "Người dùng",
+    "RESTAURATEUR": "Quản lý nhà hàng"
+  },
+  "NAME": "Tên",
+  "STATUS": "Trạng thái",
+  "ACTIONS": "Hành động",
+  "TIME": "Thời gian",
+  "DATA_TABLE": {
+    "VIEW": "Xem",
+    "RESULT1": "kết quả | Trong tổng số ",
+    "RESULT2": "kết quả",
+    "SEARCH": "Tìm kiếm",
+    "PREVIOUS": "Trước",
+    "NEXT": "Sau",
+    "ACTIVE": "Xử lý",
+    "DELETE": "Xóa",
+    "CANCEL": "Hủy",
+    "ADD": "Thêm",
+    "FIRST": "Đầu",
+    "LAST": "Cuối",
+    "DETAIL": "Chi tiết"
+  },
+  "YES": "Có",
+  "NO": "Không",
+  "QUESTION_MODAL": {
+    "ACTION": "Bạn có chắc chắn muốn xử lý việc này ?",
+    "DONE": "Bạn có chắc chăn muốn hoàn thành đơn đăng ký này ?",
+    "DELETED": "Bạn có chắc chắn muốn xóa đơn đăng ký này ?",
+    "DELETE_IMAGE": "Bạn có chắc chắn muốn xóa hình ảnh này ?",
+    "DELETE_FOOD": "Bạn có chắc chắn muốn xóa món ăn này ?",
+    "DELETE_ORDER": "Bạn có chắc chắn muốn xóa đơn đặt hàng này ?",
+    "DELETE_MENU": "Bạn có chắc chắn muốn xóa thực đơn này?",
+    "DELETE_REPORT": "Bạn có chắc chắn muốn hủy báo cáo vi phạm này?",
+    "CHANGE_OPEN_STATUS": "Bạn có chắc chắn muốn chuyển trạng thái đóng/mở cửa nhà hàng?",
+    "ACTIVE_RESTAURANT": "Bạn có chắc chắn muốn kích hoạt nhà hàng này?",
+    "DISABLE_RESTAURANT": "Bạn có chắc chắn muốn vô hiệu hóa nhà hàng này?",
+    "LOCK_RESTAURANT": "Bạn có chắc chắn muốn khóa nhà hàng này?",
+    "DELETE_RESTAURANT": "Bạn có chắc chắn muốn xóa nhà hàng này?"
+  },
+  "PROFILE_PAGE": {
+    "USERNAME": "Tên đăng nhập"
+  },
+  "TAX_NUMBER": "Mã số thuế",
+  "EDIT": "Sửa",
+  "BACK": "Quay lại",
+  "ADD_FILE": "Tải lên",
+  "PROFILE": "Thông tin tài khoản",
+  "SIDEBAR": {
+    "DASHBOARD": "Dashboard",
+    "SYSTEM": "Hệ thống",
+    "MANAGE_RESTAURANT_REGISTER": "Quản lý đăng ký",
+    "MANAGE_ADMIN": "Quản lý quản trị viên",
+    "MANAGE_USER": "Quản lý người dùng",
+    "RESTAURANT": "Nhà hàng",
+    "MANAGE_RESTAURANT": "Quản lý nhà hàng",
+    "MANAGE_ORDER": "Quản lý đơn hàng",
+    "MANAGE_MENU": "Quản lý thực đơn",
+    "MANAGE_FOOD": "Quản lý món ăn",
+    "REPORT": "Báo cáo sai phạm",
+    "MANAGE_REPORT": "Quản lý báo cáo",
+    "MEDIA": "Media",
+    "MANAGE_IMAGE": "Quản lý hình ảnh",
+    "MANAGE_VIDEO": "Quản lý video",
+    "SETTINGS": "Cài đặt",
+    "RESTAURANT_REPORT": "Nhà hàng sai phạm",
+    "USER_REPORT": "Người dùng sai phạm"
+  },
+  "RESTAURANT_INFORMATION": "Thông tin nhà hàng",
+  "RESTAURANT_IMAGES": "Hình ảnh nhà hàng",
+  "ORDER_INFORMATION": "Thông tin đơn đặt hàng",
+  "MENU_INFORMATION": "Thông tin thực đơn",
+  "MENU_CREATE": "Tạo thực đơn",
+  "SUCCESS": "THÀNH CÔNG",
+  "ERROR": "LỖI",
+  "CREATE_ADMIN": "Tạo quản trị viên",
+  "EMAIL_REQUIRED": "Bạn chưa nhập email",
+  "EMAIL_INVALID": "Email không đúng định dạng",
+  "USERNAME_REQUIRED": "Bạn chưa nhập tên đăng nhập",
+  "PASSWORD_REQUIRED": "Bạn chưa nhập mật khẩu",
+  "HEADER": {
+    "MY_PROFILE": "Hồ sơ của tôi",
+    "LOG_OUT": "Đăng xuất"
+  },
+  "MENU": "Thực đơn",
+  "FOOD": "Món ăn",
+  "OPENING_TIME": "Thời gian hoạt động",
+  "DAYS": "Ngày hoạt động",
+  "TAGS": "Thẻ",
+  "DAY": {
+    "SU": "Chủ nhật",
+    "MO": "Thứ hai",
+    "TU": "Thứ ba",
+    "WE": "Thứ tư",
+    "TH": "Thứ năm",
+    "FR": "Thứ sáu",
+    "SA": "Thứ bảy"
+  },
+  "MENU_INFORMATION": "Thông tin thực đơn",
+  "FOODS_IN_MENU_INFORMATION": "Thông tin món ăn trong thực đơn",
+  "PRICE": "Giá",
+  "IMAGE": "Hình ảnh",
+  "ADD_TAGS": "Thêm thẻ",
+  "HOUR": "giờ",
+  "ERROR_MESSAGE": {
+    "DISPLAY_NAME_LENGTH": "Không quá 20 ký tự",
+    "DISPLAY_NAME_MAX_LENGTH": "Tên hiển thị quá dài",
+    "CURRENT_PASSWORD_REQUIRED": "Bạn chưa nhập mật khẩu hiện tại",
+    "NEW_PASSWORD": "Bạn chưa nhập mật khẩu mới",
+    "CONFIRM_PASSWORD_WRONG": "Mật khẩu nhập lại không đúng với mật khẩu mới",
+    "PHONE_NUMBER_REQUIRED": "Bạn chưa nhập số điện thoại",
+    "PASSWORD_NOT_MATCH": "Mật khẩu không trùng khớp",
+    "PHONE_NUMBER_INVALID": "Số điện thoại không đúng định dạng",
+    "FOOD_NAME_REQUIRED": "Bạn chưa nhập tên món ăn",
+    "FOOD_PRICE_REQUIRED": "Bạn chưa nhập giá bán",
+    "FOOD_PRICE_INVALID": "Giá bán không hợp lệ"
+  },
+  "ACTION": {
+    "ENABLE": "Kích hoạt",
+    "DISABLE": "Vô hiệu hóa"
+  },
+  "MESSAGE_SHOW": {
+    "MENU": {
+      "UPDATED_INFO": "Cập nhật thông tin thực đơn thành công!",
+      "UPDATED_LIST": "Cập nhật danh sách món ăn trong thực đơn thành công!",
+      "CREATED": "Đã tạo thực đơn thành công!",
+      "DELETED": "Xóa thực đơn thành công!"
+    },
+    "FOOD": {
+      "CREATED": "Thêm món ăn thành công!",
+      "UPDATED": "Cập nhật thông tin món ăn thành công!",
+      "DELETED": "Xóa món ăn thành công!"
+    },
+    "LOCATION": {
+      "NO_RESULT_FOUND": "Không có kết quả vị trí!",
+      "GEO_LOCATION_FAIL": "Lỗi vị trí địa lý: "
+    },
+    "RESTAURANT": {
+      "UPDATED_INFORMATION": "Cập nhật thông tin nhà hàng thành công!"
+    },
+    "ORDER": {
+      "UPDATED_LIST_ITEM": "Cập nhật danh sách đơn đặt hàng thành công!",
+      "DELETED_USER_ORDER": "Xóa đơn đặt hàng thành công!"
+    },
+    "REPORT": {
+      "DELETED": "Đã hủy báo cáo vi phạm thành công!"
+    }
+  },
+  "CHECK_ALL_UN_CHECK": "Tất cả / Bỏ tất cả",
+  "ALL_DAY_OF_WEEK": "Tất cả các ngày trong tuần",
+  "ADD_FOOD": "Thêm món ăn",
+  "CREATE_FOOD": "Tạo món ăn",
+  "FOOD_INFORMATION": "Thông tin món ăn",
+  "USE_ADDRESS_LOCATION": "Sử dụng địa chỉ theo vị trí",
+  "DROPBOX_TEXT": "Kéo thả ảnh hoặc bấm vào đây",
+  "FOOD_DETAIL": "Chi tiết món ăn",
+  "MENU_DETAIL": "Chi tiết thực đơn",
+  "FORGOT_PASSWORD": "Quên mật khẩu",
+  "SEND": "Gửi",
+  "RESTAURANT_REGISTER_STATUS": {
+    "ALL": "Tất cả",
+    "PENDING": "Chưa xử lý",
+    "PROCESSING": "Đang xử lý",
+    "DONE": "Đã xử lý",
+    "DELETED": "Đã xóa"
+  },
+  "RESTAURANT_REGISTER_ACTIONS": {
+    "ACTIVE": "Xử lý",
+    "DONE": "Xử lý xong",
+    "DELETE": "Xóa"
+  },
+  "ADMIN_STATUS": {
+    "ALL": "Tất cả",
+    "ACTIVATED": "Đang kích hoạt",
+    "DISABLED": "Đang vô hiệu hóa"
+  },
+  "ADMIN_ACTIONS": {
+    "ENABLE": "Kích hoạt",
+    "DISABLE": "Vô hiệu hóa"
+  },
+  "USER_STATUS": {
+    "ALL": "Tất cả",
+    "ACTIVATED": "Đang kích hoạt",
+    "DISABLED": "Đang vô hiệu hóa"
+  },
+  "USER_ACTIONS": {
+    "ENABLE": "Kích hoạt",
+    "DISABLE": "Vô hiệu hóa"
+  },
+  "RESTAURANT_ACTIONS": {
+    "ACTIVE": "Kích hoạt",
+    "DISABLE": "Vô hiệu hóa",
+    "DELETE": "Xóa",
+    "LOCK": "Khóa"
+  },
+  "SUCCESS_MESSAGE": {
+    "CHANGE_INFORMATION": "Thông tin đã được thay đổi",
+    "CHANGE_PASSWORD": "Mật khẩu được thay đổi thành công",
+    "RESET_PASSWORD": "Mật khẩu đã được thay đổi"
+  },
+  "RESTAURANT_STATUS": {
+    "ALL": "Tất cả",
+    "IN_ACTIVE": "Chưa hoạt động",
+    "ACTIVATED": "Đang hoạt động",
+    "LOCK": "Đang bị khóa",
+    "DELETED": "Đã xóa"
+  },
+  "ORDER_STATUS": {
+    "ALL": "Tất cả",
+    "PENDING": "Chưa xử lý",
+    "PROCESSING": "Đang xử lý",
+    "DONE": "Đã xử lý",
+    "DELETED": "Đã xóa"
+  },
+  "REPORT_STATUS": {
+    "ALL": "Tất cả",
+    "PENDING": "Chưa xử lý",
+    "PROCESSING": "Đang xử lý",
+    "DONE": "Đã xử lý",
+    "DELETED": "Đã hủy"
+  },
+  "IMAGE_TYPE": {
+    "ALL": "Tất cả",
+    "ADMIN": "Quản trị viên",
+    "USER": "Người dùng",
+    "RESTAURANT": "Nhà hàng",
+    "FOOD": "Món ăn"
+  },
+  "REPORT_TYPE": {
+    "ALL": "Tất cả",
+    "USER": "Người dùng",
+    "RESTAURANT": "Nhà hàng"
+  },
+  "OPEN_STATUS": {
+    "OPENING": "Đang mở cửa",
+    "CLOSING": "Đang đóng cửa"
+  },
+  "CODE_ORDER": "Mã đơn hàng",
+  "CODE_RESTAURANT": "Mã nhà hàng",
+  "USER_NAME": "Khách hàng",
+  "TOTAL_PRICE": "Tổng giá",
+  "ORDER_TIME": "Thời gian đặt hàng",
+  "ORDER_INFORMATION": "Thông tin đơn đặt hàng",
+  "LIST_ORDER_ITEM": "Chi tiết đơn đặt hàng",
+  "QUANTITY": "Số lượng",
+  "RESTAURANT": "Nhà hàng",
+  "ADDRESS_MAP": "Địa chỉ theo bản đồ",
+  "NOTE": {
+    "NOTE_ADDRESS_MAP": "Địa chỉ theo bản đồ chỉ mang tính chất tham khảo!",
+    "NOTE_PHONE_NUMBER": " - Một nhà hàng có thể cung cấp nhiều số điện thoại!</br> - Số điện thoại được sử dụng các kí tự + ( ) và ký tự số !",
+    "CODE_RESTAURANT": " - Mã nhà hàng là chuỗi gồm 4 ký tự </br> - Có thể là chữ cái in hoa hoặc ký tự số!"
+  },
+  "AREA": "Khu vực",
+  "CITY": "Tỉnh/Thành phố",
+  "DISTRICT": "Quận/Huyện",
+  "VIEW_MORE": "Xem thêm",
+  "MANAGE_IMAGE": {
+    "VIEW": "Xem",
+    "CHANGE_IMAGE": "Thay đổi hình ảnh",
+    "REMOVE_IMAGE": "Xóa hình ảnh",
+    "THUMBNAIL": "Thumbnail",
+    "OWNER_NAME": "Tên chủ sở hữu",
+    "TYPE": "Loại",
+    "UPLOADED": "Thời gian upload"
+  },
+  "ADD_MENU": "Thêm thực đơn",
+  "USER_EMAIL": "Email Khách hàng",
+  "CATEGORY": "Loại sai phạm",
+  "CATEGORY_TYPE": {
+    "NOT_RECEIVING": "Không nhận hàng",
+    "BEHAVIOR": "Thái độ",
+    "SERVICE": "Dịch vụ",
+    "SANITATION": "Vệ sinh"
+  },
+  "NOTIFICATION_NOT_FOUND": "Không tìm thấy kết quả nào !",
+  "NOTIFICATION_NOT_FOUND_MENU": "Không tim thấy thực đơn nào trong hệ thống!",
+  "LIST_FOOD_IN_MENU": "Danh sách món ăn trong thực đơn",
+  "LIST_FOOD_IN_RESTAURANT": "Danh sách món ăn trong nhà hàng",
+  "DELIVERY_BOOKING": "Giao hàng / Đặt chỗ",
+  "RESTAURANT_DELIVERY": "Giao hàng",
+  "RESTAURANT_BOOKING": "Đặt chỗ",
+  "DELIVERY_DISTANCE": "Phạm vi giao hàng",
+  "IMAGE_UPLOADING": "Đang upload...",
+  "UNIT_PRICE": "Đơn vị: 1000 VNĐ",
+  "RESTAURANT_NO_IMAGES": "Nhà hàng hiện không có hình ảnh nào",
+  "FOOD_NO_IMAGE": "Chưa có hình ảnh",
+  "RESET_PASSWORD": "Khôi phục mật khẩu",
+  "MANAGEMENT": "Quản lý",
+  "ORDER_CODE": "Mã đơn hàng",
+  "USER_NAME_REPORT": "Tên người báo cáo",
+  "RESTAURANT_NAME_REPORT": "Nhà hàng báo cáo",
+  "DELIVERY_ADDRESS": "Địa chỉ giao hàng"
+}

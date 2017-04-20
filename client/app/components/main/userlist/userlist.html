@@ -1,0 +1,268 @@
+<div class="user-list-main">	
+	<h2 translate>USER_LIST</h2>
+	<button type="button" data-toggle="modal" data-target=".bs-example-modal-md2" class="btn btn-primary btn-add-user" translate>ADD_USER</button>
+	<div class="clear"></div>
+</div>
+<div class="user-list-per-page">
+	<div class="user-list-per-page-wrapper">
+		<div class="col-lg-3">
+			<div class="per-page">{{vm.currentNumPerPage}}</div>
+			<div class="per-page-icon" ng-class="{'per-page-icon-active':vm.isShowPerpageItems}" ng-click="vm.isShowPerpageItems=!vm.isShowPerpageItems"><i ng-class="{'fa-chevron-down':!vm.isShowPerpageItems,'fa-chevron-up':vm.isShowPerpageItems}" class="fa fa-chevron-down" aria-hidden="true"></i></div>
+			<div class="per-page-text" translate>PER_PAGE</div>
+			<div class="clear"></div>
+			<ul class="per-page-dropdown" ng-show="vm.isShowPerpageItems">
+				<li ng-click="vm.selectNumPerPage(25)">25</li>
+				<li ng-click="vm.selectNumPerPage(50)">50</li>
+				<li ng-click="vm.selectNumPerPage(100)">100</li>
+			</ul>
+			<div class="clear"></div>
+		</div>
+		<div class="col-lg-9">
+			<div class="per-page-search">
+				{{"SEARCH"|translate}}:<input ng-change="vm.searchFilter()" type="text" ng-model="vm.search" name="search" class="per-page-search-input">
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<table class="user-list-table">
+	<thead>
+		<tr class="user-list-title">
+			<th class="user-list-th" ng-click="vm.sort(col)" ng-class="{'sort-active':vm.sortBy==col.bindField,sortable:col.type=='string'}" ng-repeat="col in vm.fieldList">{{col.text | translate}} <i ng-class="{'fa-chevron-down':vm.reverse,'fa-chevron-up':!vm.reverse}" class="fa fa-chevron-down" aria-hidden="true" ng-show="vm.sortBy==col.bindField"></i></th>
+			<th class="user-list-th" translate>OPTION</th>	
+		</tr>
+	</thead>
+	<tbody class="user-list-body">
+		<tr class="user-list-main" ng-repeat="user in vm.showDatas | orderBy: vm.sortBy : vm.reverse | limitTo : vm.currentNumPerPage : vm.startOfPage-1">
+			<td ng-repeat="col in vm.fieldList">
+				<span ng-if="col.type=='string'">{{user[col.bindField]}}</span>
+				<input ng-if="col.type=='checkbox'" type="checkbox" name="" ng-checked="vm.isChecked(user.objectClass,col.bindField)" disabled>
+			</td>
+			<td>
+				<button type="button" class="btn btn-primary btn-edit" ng-click="vm.editUser(user,$index)" data-toggle="modal" data-target=".bs-example-modal-md" ><i class="fa fa-pencil fa-btn-edit" aria-hidden="true"></i>Edit</button>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<div class="user-list-pagination">
+	<div class="row">
+		<div class="col-lg-6 user-list-pagination-number">
+			{{"SHOWING" | translate}} {{vm.startOfPage}} {{"TO" | translate}} <span>{{vm.endOfPage}}</span> {{"ENTRIES" | translate}} {{vm.showDatas.length}}
+		</div>
+		<div class="col-lg-6 user-list-pagination-btn">
+			<div class="user-list-pagination-btn-wrapper" ng-show="vm.showDatas.length>vm.currentNumPerPage">
+				<button ng-hide="vm.currentPage==1" type="button" class="btn btn-default btn-pagination" ng-click="vm.goLeft()"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+				<button type="button" class="btn btn-pagination-number">{{vm.currentPage}}</button>
+				<button type="button" class="btn" ng-show="vm.currentPage!=vm.lastPage">..</button>
+				<button type="button" class="btn" ng-show="vm.currentPage!=vm.lastPage" ng-click="vm.gotoLastPage()">{{vm.lastPage}}</button>
+				<button type="button" class="btn btn-default btn-pagination" ng-click="vm.goRight()" ng-hide="vm.currentPage==vm.lastPage"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade bs-example-modal-md" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content"> 
+        	<div class="modal-header"> 
+        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        			<span aria-hidden="true">×</span>
+        		</button> 
+        		<h4 class="modal-title" id="myLargeModalLabel" translate>EDIT_USER</h4> 
+        	</div>
+	        <div class="modal-body modal-body-user">
+	            <form class="form-horizontal modal-body-form-user">
+	            	<div>
+	            		<div class="form-general-user">
+	            			<h4 class="modal-title" id="" translate>GENERAL_USER</h4> 
+	            		</div>
+	            		<div class="form-group form-group-user">
+	                        <label for="field-1" class="col-sm-offset-1 col-sm-4 control-label">{{"USER_ID" | translate}} :</label>
+	                        <div class="col-sm-5">
+	                            <input type="text" name="usid" class="form-control" id="" ng-model="vm.currentEditUser.uid" disabled >
+	                        </div>
+	                    </div>
+	                    <div class="form-group form-group-user">
+	                        <label for="field-1" class="col-sm-offset-1 col-sm-4 control-label">{{"NAME" | translate}} :</label>
+	                        <div class="col-sm-5">
+	                            <input type="text" name="cn" class="form-control" id="" ng-model="vm.currentEditUser.cn">
+	                        </div>
+	                    </div>
+	                    <div class="form-group form-group-user">
+	                        <label for="field-1" class="col-sm-offset-1 col-sm-4 control-label">{{"LAST_NAME" | translate}} :</label>
+	                        <div class="col-sm-5">
+	                            <input type="text" name="sn" class="form-control" id="" ng-model="vm.currentEditUser.sn">
+	                        </div>
+	                    </div>
+	                    <div class="form-group form-group-user">
+	                        <label for="field-1" class="col-sm-offset-1 col-sm-4 control-label">{{"PASSWORD" | translate}} :</label>
+	                        <div class="col-sm-5">
+	                            <input type="password" name="pass" class="form-control" id="" ng-model="vm.editPassword">
+	                        </div>
+	                    </div>
+	                    <div class="form-group form-group-user">
+	                        <label for="field-1" class="col-sm-offset-1 col-sm-4 control-label">{{"REPEAT_PASSWORD" | translate}} :</label>
+	                        <div class="col-sm-5">
+	                            <input type="password" name="rpass" class="form-control" id="" ng-model="vm.editPasswordConfirm">
+	                            <span class="change-success" ng-show="vm.passwordMessage" translate>{{"PASSWORD_UPDATED" | translate}}</span><br>
+	                            <span class="change-error" ng-show="vm.passwordErrorMessage" translate>PASSWORD_NOT_MATCH</span><span class="change-error" ng-show="vm.passwordErrorMessage"> {{vm.minPwLength}}</span>
+	                            <span ng-show="vm.editPassword.length>0" ng-hide="vm.passwordMessage" translate>UPDATE_PASSWORD_MESSAGE</span>
+	                        </div>
+	                        <div class="col-sm-2">
+		                        <button ng-click="vm.updatePassword(vm.currentEditUser.uid)" type="button" class="btn btn-primary primary-button btn-footer-save width-auto" translate>Update
+				                </button>
+			                </div>
+	                    </div>
+			            <div class="form-general-user roles-and-role">
+	            			<h4 class="modal-title" id="" translate>ROLES</h4> 
+	            		</div>
+	            		<div class="form-group form-group-user">
+	                        <label for="field-1" class="col-sm-offset-1 col-sm-4 control-label">Gmao :</label>
+	                        <div class="col-sm-5">
+	                           <input type="checkbox" ng-click="vm.includeRole('gmao')" name="" id="Gmao" ng-checked="vm.isChecked(vm.currentEditUser.objectClass, 'gmao')">
+								<label for="Gmao"></label>
+	                        </div>
+	                    </div>
+	                    <div class="form-group form-group-user">
+	                        <label for="field-1" class="col-sm-offset-1 col-sm-4 control-label">Adimot :</label>
+	                        <div class="col-sm-1">
+	                            <input type="checkbox" ng-click="vm.includeRole('adimot')" name="" id="Adimot" ng-checked="vm.isChecked(vm.currentEditUser.objectClass, 'adimot')">
+								<label for="Adimot"></label>
+	                        </div>
+	                        <div class="edit-adimot">
+		                        <label class="col-sm-3">{{"ADIMOT_ROLE" | translate}}: </label>
+		                        <input class="col-sm-3" type="number" min="vm.min" max="vm.max" ng-model="vm.currentEditUser.adimotrole">
+		                    </div>    
+	                    </div>
+	                    <div class="form-group form-group-user">
+	                        <label for="field-1" class="col-sm-offset-1 col-sm-4 control-label">Mobility :</label>
+	                        <div class="col-sm-5">
+	                            <input type="checkbox" ng-click="vm.includeRole('mobility')" name="" id="Mobility" ng-checked="vm.isChecked(vm.currentEditUser.objectClass, 'mobility')">
+								<label for="Mobility"></label>
+	                        </div>
+	                    </div>
+	                    <div class="form-group form-group-user">
+	                        <label for="field-1" class="col-sm-offset-1 col-sm-4 control-label">User Management :</label>
+	                        <div class="col-sm-5">
+	                            <input type="checkbox" name="" ng-click="vm.includeRole('userManagement')" id="Management" ng-checked="vm.isChecked(vm.currentEditUser.objectClass, 'userManagement')">
+								<label for="Management"></label>
+	                        </div>
+	                    </div>
+	            	</div>
+	            </form>
+	        </div>
+	        <div class="modal-footer">
+	        	<div class="col-sm-12 change-error" ng-show="vm.updateUserErrorMessage">{{ "NAME_EXISTS_ALREADY" | translate}}</div>
+                <div class="col-sm-12">
+                    <button data-dismiss="modal" type="button" class="btn btn-primary primary-button btn-footer-cancel width-auto" translate>
+                    CANCEL
+                    </button>
+					<button type="button" ng-click="vm.updateUser(vm.currentEditUser)" class="btn btn-primary primary-button btn-footer-save width-auto" translate>
+                    SAVE
+                    </button>
+                    <button type="button" data-dismiss="modal" ng-click="vm.deleteUser(vm.currentEditUser.cn)" class="btn btn-primary primary-button btn-footer-delete width-auto" translate>
+                    DELETE
+                    </button>
+                </div>
+            </div>
+    	</div>
+    </div>
+</div>
+<div class="modal fade bs-example-modal-md2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content"> 
+        	<div class="modal-header"> 
+        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        			<span aria-hidden="true">×</span>
+        		</button> 
+        		<h4 class="modal-title" id="myLargeModalLabel" translate>ADD_USER</h4> 
+        	</div>
+	        <div class="modal-body modal-body-user">
+	            <form class="form-horizontal modal-body-form-user">
+	            	<div>
+	            		<div class="form-general-user">
+	            			<h4 class="modal-title" id="" translate>GENERAL_USER</h4> 
+	            		</div>
+	            		<div class="form-group form-group-user">
+	                        <label for="field-1" class="col-sm-offset-1 col-sm-4 control-label">{{"USER_ID"}} :</label>
+	                        <div class="col-sm-5">
+	                            <input type="text" ng-class="{ redborder: vm.isMissingField&&!vm.addUser.uid}" name="usid" ng-model="vm.addUser.uid" class="form-control" id="" required>
+	                        </div>
+	                        <span class="col-sm-5 col-sm-offset-4 change-error" ng-show="vm.isEntryExists" translate>ENTRY_ALREADY_EXISTS</span>
+	                    </div>
+	                    <div class="form-group form-group-user">
+	                        <label for="field-1" class="col-sm-offset-1 col-sm-4 control-label">{{"NAME" | translate}} :</label>
+	                        <div class="col-sm-5">
+	                            <input type="text" ng-class="{ redborder: vm.isMissingField&&!vm.addUser.cn}" name="cn" ng-model="vm.addUser.cn" class="form-control" id=""required>
+	                        </div>
+	                    </div>
+	                    <div class="form-group form-group-user">
+	                        <label for="field-1" class="col-sm-offset-1 col-sm-4 control-label">{{"LASTNAME" | translate}} :</label>
+	                        <div class="col-sm-5">
+	                            <input type="text" name="sn" ng-class="{ redborder: vm.isMissingField&&!vm.addUser.sn}" ng-model="vm.addUser.sn" class="form-control" id=""required>
+	                        </div>
+	                    </div>
+	                    <div class="form-group form-group-user">
+	                        <label for="field-1" class="col-sm-offset-1 col-sm-4 control-label">{{"PASSWORD" | translate}} :</label>
+	                        <div class="col-sm-5">
+	                            <input type="password" name="pass" ng-class="{ redborder: vm.isMissingField&&!vm.addUser.userPassword}" ng-model="vm.addUser.userPassword" class="form-control" id="" required>
+	                        </div>
+	                    </div>
+	                    <div class="form-group form-group-user">
+	                        <label for="field-1" class="col-sm-offset-1 col-sm-4 control-label">{{"REPEAT_PASSWORD" | translate}}:</label>
+	                        <div class="col-sm-5">
+	                            <input type="password" ng-class="{ redborder: vm.isMissingField&&!vm.addUserConfirmPW}" name="rpass" ng-model="vm.addUserConfirmPW" class="form-control" id=""required>
+	                        </div>
+	                        <span class=" col-sm-5 col-sm-offset-4 change-error" ng-show="!vm.isPasswordConfirm">{{"PASSWORD_NOT_MATCH" |translate}}<span class="change-error" ng-show="!vm.isPasswordConfirm"> {{vm.minPwLength}}</span></span>
+	                    </div>
+			            <div class="form-general-user roles-and-role">
+	            			<h4 class="modal-title" id="" translate>ROLES</h4> 
+	            		</div>
+	            		<div class="form-group form-group-user">
+	                        <label for="field-1" class="col-sm-offset-1 col-sm-4 control-label">Gmao :</label>
+	                        <div class="col-sm-5">
+	                           <input type="checkbox" name="" ng-checked="vm.isChecked(vm.addUser.objectClass, 'gmao')" ng-click="vm.includeAddUserRole('gmao')" value="Gmao" id="Gmao">
+								<label for="Gmao"></label>
+	                        </div>
+	                    </div>
+	                    <div class="form-group form-group-user">
+	                        <label for="field-1" class="col-sm-offset-1 col-sm-4 control-label">Adimot :</label>
+	                        <div class="col-sm-1">
+	                            <input type="checkbox" name="" ng-checked="vm.isChecked(vm.addUser.objectClass, 'adimot')" ng-click="vm.includeAddUserRole('adimot')" value="Adimot" id="Adimot">
+								<label for="Adimot"></label>
+	                        </div>
+	                        <div class="edit-adimot">
+		                        <label class="col-sm-3">{{"ADIMOT_ROLE" | translate}}: </label>
+		                        <input class="col-sm-3" type="number" min="vm.min" max="vm.max" ng-model="vm.addUser.adimotrole">
+		                    </div>    
+	                    </div>
+	                    <div class="form-group form-group-user">
+	                        <label for="field-1" class="col-sm-offset-1 col-sm-4 control-label">Mobility :</label>
+	                        <div class="col-sm-5">
+	                            <input type="checkbox" name="" ng-click="vm.includeAddUserRole('mobility')" value="Mobility" id="Mobility" ng-checked="vm.isChecked(vm.addUser.objectClass, 'mobility')">
+								<label for="Mobility"></label>
+	                        </div>
+	                    </div>
+	                    <div class="form-group form-group-user">
+	                        <label for="field-1" class="col-sm-offset-1 col-sm-4 control-label">User Management :</label>
+	                        <div class="col-sm-5">
+	                            <input type="checkbox" name="" ng-checked="vm.isChecked(vm.addUser.objectClass, 'userManagement')" ng-click="vm.includeAddUserRole('userManagement')" value="Management" id="Management">
+								<label for="Management"></label>
+	                        </div>
+	                    </div>
+	            	</div>
+	            </form>
+	        </div>
+	        <div class="modal-footer">
+                <div class="col-sm-12">
+                    <button data-dismiss="modal" type="button" ng-click="vm.cancelAddUser()" class="btn btn-primary primary-button btn-footer-cancel width-auto" translate>
+                    CANCEL
+                    </button>
+					<button ng-click="vm.addNewUser()" type="button" class="btn btn-primary primary-button btn-footer-save width-auto" translate>
+                    SAVE
+                    </button>
+                </div>
+            </div>
+    	</div>
+    </div>
+</div>

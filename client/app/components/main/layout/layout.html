@@ -1,0 +1,23 @@
+<div ng-class="header.boxed" class="default-page">
+    <div class="side-bar-container">
+
+        <nav id="sidebar" role="navigation" data-step="3" data-intro="Template has &lt;b&gt;many navigation styles&lt;/b&gt;" data-position="right" ng-include="'app/components/main/layout/sidebar.html'" ng-menu="" class="navbar-default navbar-static-side side-bar-dashboard"></nav>
+    </div>
+    <div class="right-part-container">
+        <div id="header-topbar-option-demo" ng-include="'app/components/main/layout/header.html'" onload="load_header()" class="page-header-topbar"></div>
+        <div id="wrapper" ng-class="header.layout_menu">
+            <div id="page-wrapper" ng-class="header.animation" class="animated">
+                <div class="flash-message" ng-if="notification">
+                    <div class="{{'notification notification-' + notification.type}}" ng-bind="notification.message"> {{notification.message | translate}}
+                    </div>
+                </div>
+                <div ui-view="" class="page-content app-content-body"></div>
+                <!--BEGIN CONTENT QUICK SIDEBAR-->
+                <!--<div ng-include="'templates/states/_includes/quick-sidebar.html'" ng-class="{show:header.history}" class="quick-sidebar"></div>-->
+                <!--END CONTENT QUICK SIDEBAR-->
+            </div>
+            <div id="footer" ng-include="'app/components/main/layout/footer.html'" ng-show="header.footer" class="hide"></div>
+        </div>
+    </div>
+        
+</div>

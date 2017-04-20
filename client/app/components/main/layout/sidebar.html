@@ -1,0 +1,55 @@
+<div class="sidebar-collapse menu-scroll">
+    <ul id="side-menu" class="nav admin-nav-main side-bar-items">
+        <li class="user-panel">
+            <div class="thumb">
+                <img src="../assets/images/user.jpg" class="img-circle"/>
+            </div>
+            <div class="side-bar-user">
+                <div class="side-bar-text">Welcome.</div>
+                <div class="side-bar-text side-bar-name-user">{{user.username}}</div>
+            </div>
+            <!-- <div class="info">
+                <p>{{vm.myInfor.display_name || vm.myInfor.username}}</p>
+                <ul class="list-inline list-unstyled">
+                    <li><a ui-sref="index.profile" data-hover="tooltip" title="Hey"><i class="fa fa-user"></i></a></li>
+                    <li><a  data-hover="tooltip" title="Setting" data-toggle="modal" data-target="#modal-config"><i class="fa fa-cog"></i></a></li>
+                    <li ng-click="vm.logOut()"><a  data-hover="tooltip" title="Logout"><i class="fa fa-sign-out"></i></a></li>
+                </ul>
+            </div> -->
+            <div class="clearfix"></div>
+        </li>
+        <li ng-class="{active: $state.includes('index.dashboard')}">
+            <a ui-sref="index.dashboard">
+                <i class="fa fa-desktop fa-fw"><div class="icon-bg bg-orange"></div></i>
+                <span class="menu-title">{{"DASHBOARD"|translate}}</span>
+            </a>
+        </li>
+        <li ng-class="{active: $state.includes('index.userlist')}">
+            <a ui-sref="index.userlist">
+                <i class="fa fa-sitemap fa-fw"><div class="icon-bg bg-orange"></div></i>
+                <span class="menu-title">{{"USER_LIST"|translate}}</span>
+            </a>
+        </li>
+       <!--  <li>
+            <a ui-sref="index.dashboard">
+                <i class="fa fa-user-md fa-fw"><div class="icon-bg bg-orange"></div></i>
+                <span class="menu-title">{{"B"|translate}}</span>
+            </a>
+        </li>
+        <li>
+            <a ui-sref="index.dashboard">
+                <i class="fa fa-user fa-fw"><div class="icon-bg bg-orange"></div></i>
+                <span class="menu-title">{{"C"|translate}}</span>
+            </a>
+        </li> -->
+
+        <!--<li ng-class="{active: $state.includes('index.restaurant-register') || $state.includes('index.manage-admin') || $state.includes('index.manage-user')}">
+            <a><i class="fa fa-cog fa-fw"><div class="icon-bg bg-pink"></div></i><span class="menu-title">{{"SIDEBAR.SYSTEM"|translate}}</span><span class="fa arrow"></span></a>
+            <ul class="nav nav-second-level">
+                <li ng-class="{active: $state.includes('index.restaurant-register')}"><a ui-sref="index.restaurant-register"><i class="fa fa-envelope"></i><span class="submenu-title">{{"SIDEBAR.MANAGE_RESTAURANT_REGISTER"|translate}}</span></a></li>
+                <li ng-class="{active: $state.includes('index.manage-admin')}"><a ui-sref="index.manage-admin"><i class="fa fa-user-secret"></i><span class="submenu-title">{{"SIDEBAR.MANAGE_ADMIN"|translate}}</span></a></li>
+                <li ng-class="{active: $state.includes('index.manage-user')}"><a ui-sref="index.manage-user"><i class="fa fa-user"></i><span class="submenu-title">{{"SIDEBAR.MANAGE_USER"|translate}}</span></a></li>
+            </ul>
+        </li>-->
+    </ul>
+</div>

@@ -1,0 +1,50 @@
+<div id="signin-page" class="login-page-form">
+  <div class="page-form-wrapper"></div>
+  <div class="page-form">
+    <form novalidate name="formLogin" class="form" ng-submit="formLogin.$valid && vm.login()">
+      <div class="header-content form-login-header">
+        <h1 class="form-login-header-title" translate>LOG_IN</h1>
+        <h2 class="form-login-header-text" translate>TITLE</h2>
+      </div>
+      <div class="body-content form-login-content">
+        <div ng-show="vm.isShowError" class="form-login-error">
+          <div class="form-login-error-title" translate>INVALID_LOGIN</div>
+          <div class="form-login-error-text" translate>INVALID_LOGIN_MESSAGE</div>
+        </div>
+        <div class="form-group">
+          <div class="right form-control-uspass">
+            <i class="fa fa-user fa-login-icon"></i>
+            <input type="text" placeholder={{"USERNAME_OR_EMAIL"|translate}} name="username" class="form-control" ng-model="vm.user.username" required/>
+              <span class="text-danger" ng-show="formLogin.$submitted && formLogin.username.$error.required">{{"USERNAME_REQUIRED"|translate}}</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="right form-control-uspass">
+              <i class="fa fa-key fa-login-icon"></i>
+              <input type="password" placeholder={{"PASSWORD"|translate}} name="password" class="form-control" ng-model="vm.user.password" required/>
+              <span class="text-danger" ng-show="formLogin.$submitted && formLogin.password.$error.required">{{"PASSWORD_REQUIRED"|translate}}</span>
+          </div>
+        </div>
+        <!-- <div class="form-group pull-left">
+          <div class="checkbox-list">
+            <label>
+              <input icheck="" type="checkbox" ng-model="vm.remember_me"/>&nbsp;
+              {{"REMEMBER_ME"|translate}}
+            </label>
+          </div>
+        </div> -->
+        <div class="form-group">
+          <button type="submit" ng-click="vm.submit()" class="btn btn-success btn-submit-login">
+            {{"LOG_IN"|translate}}
+            &nbsp;<i class="fa fa-sign-in fa-submit-login"></i>
+          </button>
+        </div>
+        <div class="clearfix"></div>
+        <!-- <div class="forget-password">
+          <h4>{{"FORGOTTEN_PASSWORD"|translate}}?</h4>
+          <p>{{"LINK_RESET_PASSWORD.1"|translate}} <a ui-sref="forgot-password" class='btn-forgot-pwd'>{{"LINK_RESET_PASSWORD.2"|translate}}</a> {{"LINK_RESET_PASSWORD.3"|translate}}.</p>
+        </div> -->
+      </div>
+    </form>
+  </div>
+</div>
